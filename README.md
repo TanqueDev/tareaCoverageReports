@@ -4,5 +4,23 @@ Esa es la razón por la cual hay archivos demás en el directorio. Esta decisió
 
 Dicho esto, empecemos explicando parte por parte los códigos que se encuentran tando en main.py como en test_main.py
 
-Código de main.py 
+## Explicación de main.py
+Código de main.py:
+```python
+def suma(a,b):
+  return a+b
+def resta(a,b):
+  return a-b
+def multiplicacion(a,b):
+  return a*b
+def division(a,b):
+  if b==0:
+    raise ZeroDivisionError("No se puede dividir entre 0")
+  return a/b
 ```
+En el código, como fue pedido originalmente se definieron funciones que realizan las cuatro operaciones básicas: Suma, resta, multiplicación y división.
+Es importante mencionar que en la función de división, se definió una excepción para los casos en los que B sea cero, que es una excepción ZeroDivisionError. Esto es con el objetivo de identificar en qué pruebas se introdujo un cero como divisor y así cuando al ejecutar el código con un parámetro igual a cero para el denominador, se lance una excepción de división entre 0.
+
+## Explicación de test_main.py
+Código de test_main.py:
+```python 
